@@ -1,0 +1,24 @@
+POST http://localhost:9000/car/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "carLicenseNumber": "KA 12 U 1290",
+    "manufacturer": "honda",
+    "model": "wrv",
+    "base_price": 500,
+    "price_per_hour": 150,
+    "security_deposit": 1000
+}
+###
+GET http://localhost:9000/car/ HTTP/1.1
+###
+GET http://localhost:9000/car/61653637a3d820c1e3e9e5dc HTTP/1.1
+###
+PATCH http://localhost:9000/car/61652b79d2ceaa9f44b262f5 HTTP/1.1
+Content-Type: application/json
+
+{
+    "model": "city"
+}
+###
+DELETE  http://localhost:9000/user/61652b79d2ceaa9f44b262f5 HTTP/1.1
